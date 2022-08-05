@@ -32,14 +32,12 @@ let SamsungGalaxy10 = new Mobile(
   3,
   400
 );
-iPhone3G.printCharacter();
-Nokia3210.printCharacter();
+
+let arrayMobile = [Nokia3210, iPhone3G, SamsungGalaxy10];
 
 Nokia3210.setIs5G(true);
 Nokia3210.setCameraNumber(4);
 
-console.log(Nokia3210.getIs5G());
-console.log(Nokia3210.getCameraNumber());
-
-Nokia3210.printCharacter();
-SamsungGalaxy10.printCharacter();
+arrayMobile[0].imprimirCharacter();
+arrayMobile[1].imprimirCharacter();
+arrayMobile[2].imprimirCharacter();

@@ -1,12 +1,12 @@
 export class Mobile {
-  public name: string;
-  public model: string;
-  public tradeMark: string;
-  public sdSize: string;
-  public color: string;
-  public is5G: boolean;
-  public cameraNumber: number;
-  public price: number;
+  private name: string;
+  private model: string;
+  private tradeMark: string;
+  private sdSize: string;
+  private color: string;
+  private is5G: boolean;
+  private cameraNumber: number;
+  private price: number;
 
   constructor(
     name: string,
@@ -70,11 +70,42 @@ export class Mobile {
     return this.price;
   }
 
+  public setName(name: string): void {
+    this.name = name;
+  }
+
+  public setModel(model: string): void {
+    this.model = model;
+  }
+
+  public setTradeMark(tradeMark: string): void {
+    this.tradeMark = tradeMark;
+  }
+
+  public setSdSize(sdSize: string): void {
+    this.sdSize = sdSize;
+  }
+
+  public setColor(color: string): void {
+    this.color = color;
+  }
+
   public setIs5G(is5G: boolean): void {
     this.is5G = is5G;
   }
 
   public setCameraNumber(cameraNumber: number): void {
     this.cameraNumber = cameraNumber;
+  }
+
+  public imprimirCharacter(): void {
+    console.log(`The characteristics of the mobile ${this.name} are:`);
+    console.log(`Name: ${this.name}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`TradeMark: ${this.tradeMark}`);
+    console.log(`SD Size (GB): ${this.sdSize}`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Is 5g?: ${this.is5G}`);
+    console.log(`Number Of Cameras: ${this.cameraNumber}`);
   }
 }
